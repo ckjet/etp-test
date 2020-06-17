@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Базовая система{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ abs_asset('build/vendor/font-awesome/css/font-awesome.css') }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="extLoading" id="extLoading">
+        <div class="loader"></div>
+        <h2>Загрузка...</h2>
+        <div class="msg">
+            Наш сайт не поддерживает браузеры с выключеным
+            <a href="http://lmgtfy.com/?q=how+to+enable+javascript+in+browser" target="_blank">javascript</a>.
+        </div>
+    </div>
+{% endblock %}

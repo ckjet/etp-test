@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{% block title %}Homepage{% endblock %} &mdash; ETP PB</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ abs_asset('build/vendor/extjs/build/classic/theme-neptune/resources/theme-neptune-all.css') }}"/>
+        <link rel="stylesheet" href="{{ abs_asset('build/css/custom.css') }}"/>
+    {% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="{{ abs_asset('build/vendor/extjs/build/ext-all-debug.js') }}"></script>
+    <script type="text/javascript" src="{{ abs_asset('build/js/Common.js') }}"></script>
+    <script type="text/javascript" src="{{ abs_asset('build/js/Application.js') }}"></script>
+{% endblock %}
+</body>
+</html>

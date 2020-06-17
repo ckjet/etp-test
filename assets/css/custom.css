@@ -1,0 +1,136 @@
+.extLoading {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 50%;
+    text-align: center;
+    margin-top: -100px;
+}
+.extLoading .loader {
+    display:block;
+    position:relative;
+    left:50%;
+    top:50%;
+    width:170px;
+    height:170px;
+    margin:-90px 0 0 -90px;
+    border-radius:50%;
+    border:3px solid transparent;
+    border-top-color:#14b1f3;
+    -webkit-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+    z-index:1001;
+}
+.extLoading .loader:before {
+    content:"";
+    position:absolute;
+    top:5px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+    border-radius:50%;
+    border:3px solid transparent;
+    border-top-color:#33bffa;
+    -webkit-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+.extLoading .loader:after {
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border-radius:50%;
+    border:3px solid transparent;
+    border-top-color:#63d1ff;
+    -webkit-animation:spin 1.5s linear infinite;
+    animation:spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100% {
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100% {
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.extLoading .msg {
+    margin-top: 80px;
+}
+
+.x-form-item-label.x-form-item-label-top {
+    display: table-row;
+}
+
+.x-form-item-label.x-form-item-label-top + .x-form-item-body {
+    display: block;
+}
+
+/** Fix for datefield monyh/year backdrop showing */
+.x-datepicker .x-monthpicker {
+    display: block !important;;
+}
+
+/** Removing watermark */
+.x-panel-header-title-default > .x-title-text-default::after,
+.x-window-header-title-default > .x-title-text-default::after {
+    content: '';
+}
+
+/** Profile View */
+.profile-view-container {
+    box-sizing: border-box;
+}
+.profile-view-container {
+    padding: 10px 0;
+}
+.profile-view-container .preview {
+    margin-left: 8px;
+}
+
+.profile-view-container table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 8px;
+}
+.profile-view-container table tr td:nth-child(1) {
+    width: 130px;
+    font-weight: bold;
+}
+.profile-view-container table tr td {
+    border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.profile-view-container table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-view-container .profile-img,
+body.printable .profile-view-container .preview {
+    display: none;
+}
+
+body.printable .profile-view-container .profile-img {
+    display: block;
+}

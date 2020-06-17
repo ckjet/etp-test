@@ -1,0 +1,22 @@
+doctrine:
+    dbal:
+        default_connection: pgsql
+        connections:
+            pgsql:
+                url: '%env(DATABASE_URL)%'
+                driver: 'pdo_pgsql'
+                server_version: '9.3'
+                charset: utf8
+    orm:
+        default_entity_manager: pg
+        auto_generate_proxy_classes: true
+        entity_managers:
+            pg:
+                connection: pgsql
+                mappings:
+                    Pg:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                        alias: App
